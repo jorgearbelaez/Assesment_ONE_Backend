@@ -7,7 +7,7 @@ const handlerLogin = async (req, res) => {
   const user = await User.findOne({ email });
   if (!user) {
     return res.status(400).json({
-      msg: "Email or password is incorrect",
+      msg: "Usuario no registrado",
     });
   }
 
@@ -21,7 +21,7 @@ const handlerLogin = async (req, res) => {
     });
   } else {
     return res.status(403).json({
-      msg: "Something went wrong",
+      msg: "Credenciales Incorrectas",
     });
   }
 };

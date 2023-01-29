@@ -10,10 +10,10 @@ const router = Router();
 router.post(
   "/",
   [
-    check("email", "email is not valid").isEmail(),
+    check("email", "email no es valido").isEmail(),
     check("email").custom(emailExist),
-    check("password", "pasword is required").exists(),
-    check("password", "password must be greater than 6 characters").isLength({
+    check("password", "El password es obligatorio").exists(),
+    check("password", "El password debe ser de minimo 6 caracteres").isLength({
       min: 6,
     }),
 

@@ -21,7 +21,7 @@ const handlerAllUsers = async (req, res) => {
 
     res.json(users);
   } catch (error) {
-    res.status(500).json({ msg: "Error getting users" });
+    res.status(500).json({ msg: "Error obteniendo los usuarios" });
   }
 };
 

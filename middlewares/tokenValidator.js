@@ -18,12 +18,12 @@ const validateJWT = async (req, res, next) => {
       return next();
     } catch (error) {
       console.log(error);
-      return res.status(401).json({ msg: "Token not valid" });
+      return res.status(401).json({ msg: "Token no válido" });
     }
   }
 
   if (!token) {
-    const error = new Error("Token required");
+    const error = new Error("Token requerido");
     return res.status(401).json({ msg: error.message });
   }
 
