@@ -50,7 +50,7 @@ Para poder ejecutar el proyecto de manera local dejaré los siguientes pasos par
 ### Estructura De Carpetas
   ```
                              
-  backend_calyaan:  
+  backend  
   
      --Api                   manejo por features con sus repectivos(modelos,rutas,controladores y servicios)
      
