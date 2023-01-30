@@ -9,7 +9,8 @@ const validateJWT = async (req, res, next) => {
   if (authorization && authorization.startsWith("Bearer")) {
     try {
       token = authorization.split(" ")[1];
-      const decoded = jwt.verify(token, process.env.JWT_KEY);
+      console.log(token);
+      const decoded = jwt.verify(token, process.env.JWT_SECRET);
 
       req.user = await User.findById(decoded.id).select(
         "-password -token  -createdAt -updatedAt -__v "

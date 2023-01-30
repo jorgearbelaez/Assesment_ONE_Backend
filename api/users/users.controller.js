@@ -14,10 +14,10 @@ const handlerCreateUser = async (req, res) => {
 };
 
 const handlerAllUsers = async (req, res) => {
-  const { limit = 5, page = 1 } = req.query;
+  const { limite = 5, pagina = 1 } = req.query;
 
   try {
-    const users = await getAllUsers(limit, page);
+    const users = await getAllUsers(limite, pagina);
 
     res.json(users);
   } catch (error) {

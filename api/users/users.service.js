@@ -17,7 +17,7 @@ const getAllUsers = async (limit, page) => {
     totalDocs: total,
     currentPage: Number(page),
     totalPages: Math.ceil(total / limit),
-    results: users,
+    resultados: users,
   };
 };
 
